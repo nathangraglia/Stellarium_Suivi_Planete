@@ -37,6 +37,7 @@ def recolte():
         # Vitesse 
         if date != date_debut_jul:
             vitesse = calc_vitesse(vitesse, intervalle, x[1], longitude) # Calcul de la vitesse de l'objet
+            intervalle = set_intervalle(vitesse[1])
         longitude = x[1]
 
         # Zones
@@ -46,4 +47,5 @@ def recolte():
         s.main.setTimeJD(date) # Actualisation de la date
         i+=1
     print("Observation terminée")
+
 
